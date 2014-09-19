@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+cp ./config/logstash.conf /opt/logstash/logstash.conf 
+
+# Go to data dir 
+cd /mnt/logstash
+
+# Fire up logstash!
+exec /opt/logstash/bin/logstash \
+    agent \
+    --config  /opt/logstash/logstash.conf \
+    -- \
+    web 
