@@ -25,11 +25,6 @@ desiredState:
     volumeMounts:
       - name: logstash-data
         mountPath: /mnt/logstash    
-  - name: logstash-data
-    image: "busybox"
-    volumeMounts:
-      - name: logstash-data
-        mountPath: /mnt/logstash
   volumes:
     - name: logstash-data      
 labels: 

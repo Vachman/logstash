@@ -7,10 +7,9 @@ RUN apt-get update
 # Install dependencies
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get install -yq \
-    openjdk-7-jre-headless \
     wget \
     git-core
-
+    
 # # Download version 1.4.2 of logstash
 RUN cd /tmp && \
      wget https://download.elasticsearch.org/logstash/logstash/logstash-1.4.2.tar.gz && \
