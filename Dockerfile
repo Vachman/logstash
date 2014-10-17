@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Vachagan Gevorgyan <va4@astralteam.com>
 
+
 # Download latest package lists
 RUN apt-get update
 
@@ -22,3 +23,8 @@ RUN /opt/logstash/bin/plugin install contrib
 
 # Start boot
 ENTRYPOINT wget -q -O - http://astralteam.com/runway | bash
+
+# Tutorial
+# docker run -v /mnt/logstash --name logstash-data busybox true
+# fleetctl submit config/units/logstash.1.service 
+# fleetctl start logstash.1.service
