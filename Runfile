@@ -9,7 +9,4 @@ cd /mnt/logstash
 exec /opt/logstash/bin/logstash \
     agent \
     --config  /opt/logstash/logstash.conf \
-    --log /mnt/logstash/log/logstash.log \
-    -- \
-    web
-    
+    --log /mnt/logstash/log/logstash.log 
